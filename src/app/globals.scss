@@ -1,0 +1,24 @@
+:root {
+  --clr-primary: rgb(20, 255, 202);
+  --clr-add: rgb(21, 21, 21);
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: var(--font-sf-pro), -apple-system, BlinkMacSystemFont, sans-serif;
+  background-color: var(--clr-add);
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@media (prefers-color-scheme: dark) {
+  html {
+    color-scheme: dark;
+  }
+}
