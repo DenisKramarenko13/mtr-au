@@ -24,10 +24,10 @@ export async function GET(request: Request) {
 
     if (!mrkId) {
       // 1. Запрашиваем МАРКИ с Aleado
-      const targetUrl = 'https://auc.aleado.com/auctions/?p=project/searchform';
+      const targetUrl = 'https://auc.aleado.com/auctions/?p=project/searchform&searchtype=max&s&ld';
       let response = await fetch(targetUrl, {
         headers,
-        next: { revalidate: 3600 },
+        cache: 'no-store',
       });
 
       if (!response.ok) {
@@ -39,10 +39,10 @@ export async function GET(request: Request) {
       const $ = cheerio.load(html);
       const results: OptionItem[] = [];
 
-      $('select#mrk option').each((_, element) => {
+      $('select[name="mrk"] option, select#mrk option').each((_, element) => {
         const val = $(element).attr('value')?.trim();
         const text = $(element).text().trim();
-        if (val && val !== '-1' && val !== '0' && text) {
+        if (val && val !== '-1' && val !== '0' && text && !text.includes('---')) {
           results.push({ id: val, name: text });
         }
       });
@@ -56,7 +56,7 @@ export async function GET(request: Request) {
 
       let response = await fetch(targetUrl, {
         headers,
-        next: { revalidate: 3600 },
+        cache: 'no-store',
       });
 
       if (!response.ok) {
@@ -65,13 +65,15 @@ export async function GET(request: Request) {
       }
 
       const rawText = await response.text();
-      const $ = cheerio.load(rawText);
+      // Очищаем экранирование Sajax JavaScript
+      const cleanHtml = rawText.replace(/\\"/g, '"').replace(/\\'/g, "'");
+      const $ = cheerio.load(cleanHtml);
       const results: OptionItem[] = [];
 
       $('option').each((_, element) => {
-        let val = $(element).attr('value')?.replace(/\\|"/g, '').trim();
+        let val = $(element).attr('value')?.trim() || '';
         const text = $(element).text().trim();
-        if (val && val !== '-1' && val !== '0' && text) {
+        if (val && val !== '-1' && val !== '0' && text && !text.includes('---')) {
           results.push({ id: val, name: text });
         }
       });

@@ -1,0 +1,553 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+
+<head>
+    <title>ALEADO.COM: Japanese Auto Auctions</title>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="centrifugo-url" content="wss://auc.aleado.com/ws">
+    <meta name="centrifugo-user" content="f74064e35e82a7b26ec8f9befd8d6efe790346a9a1edfcb63b41aa16f3168fe2">
+    <meta name="centrifugo-token" content="eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJmNzQwNjRlMzVlODJhN2IyNmVjOGY5YmVmZDhkNmVmZTc5MDM0NmE5YTFlZGZjYjYzYjQxYWExNmYzMTY4ZmUyIiwiZXhwIjoxNzg0ODE3MDY1fQ.5MetP74KK7AMhnEP6xolUrBGR2cuFOwdDOChq1d1GJA">
+
+    <link rel="icon" href="/static/img/yahooeng/favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/aleado/aleado.css">
+    <link rel="stylesheet" href="/static/js/highslide/highslide.css">
+    <link rel="stylesheet" href="/static/js/highslide/highslide-slideshow.css">
+    <link rel="stylesheet" href="/static/css/menu.css">
+    <link rel="stylesheet" href="/static/css/aleado/jquery-ui/jquery-ui.css">
+    <link rel="stylesheet" href="/static/js/lib/video-js/video.min.css">
+    <link rel="stylesheet" href="/static/js/lib/multiselect/index.css">
+    <link rel="stylesheet" href="/static/js/lib/trumbowyg/trumbowyg.min.css">
+
+    <script type="text/javascript" src="/static/js/lib/centrifuge.min.js"></script>
+    <script type="text/javascript" src="/static/js/utils.js"></script>
+    <script type="text/javascript" src="/static/js/popup.js"></script>
+    <script type="text/javascript" src="/static/js/highslide/highslide-full.packed.js"></script>
+    <script type="text/javascript" src="/static/js/highslide/highslide-slideshow.js"></script>
+    <script type="text/javascript" src="https://code.jquery.com/jquery-3.0.0.min.js"></script>
+    <script src="/static/js/aleado/jquery-ui-1.12.1.costom.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery/jquery.notify.js"></script>
+    <script src="/static/js/lib/multiselect/index.js"></script>
+    <script type="text/javascript" src="/static/js/aleado/main.js"></script>
+
+    <script type="text/javascript" src="/static/js/menu.js">
+
+    /***********************************************
+     * AnyLink CSS Menu script v2.0- © Dynamic Drive DHTML code library (www.dynamicdrive.com)
+     * This notice MUST stay intact for legal use
+     * Visit Project Page at http://www.dynamicdrive.com/dynamicindex1/anylinkcss.htm for full source code
+     ***********************************************/
+
+    </script>
+
+    <script type="text/javascript">
+        anylinkcssmenu.init("anchorclass")
+    </script>
+</head>
+
+<body leftmargin="0" topmargin="0" marginwidth="0" marginheight="0" onload="loadDocument();">
+
+
+    <script type="text/javascript">
+        hs.graphicsDir = '/static/js/highslide/graphics/';
+        hs.outlineType = 'rounded-white';
+    </script>
+
+    <div id="popupMask" style="display:none;"></div>
+    <div id="popupContainer" style="display:none;">
+        <table width="100%" cellpadding="10" cellspacing="3" style="border: 2px solid #000000;">
+        <tr style="background:#FFFFFF" valign="top"><td id="popup_content"></td></tr>
+        </table>
+    </div>
+
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+    <tr>
+        <td>
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <tr>
+                <td width="189" height="71" valign="middle" style="background: url(/static/img/logo_header.gif)">
+                    <div style="MARGIN-LEFT: 8px; width:181px"><img src="/static/img/yahooeng/logo.gif"></div>
+                </td>
+                <td height="71" style="background: url(/static/img/bg02.gif)">
+
+                    <table width="100%" border="0" cellspacing="0" cellpadding="0" class="Verdana12px">
+                    <tr>
+                        <td height="24">&nbsp;</td>
+                    </tr>
+                    <tr>
+                        <td align="left" valign="middle">
+                            <table border="0" cellpadding="1" cellspacing="1" class="Verdana12px"><tr>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/auctions/?p=project/searchform&amp;searchtype=max&amp;s&amp;ld" class="anchorclass" rel="subauto">Cars</a></td>
+<div id="subauto" class="anylinkcss"><ul>
+<li><b>Japan Auctions</b></li>
+<li><a href="/auctions?p=project/productiondate">Date of production</a></li>
+<li><a href="/stats/?p=project/fastform">Auto statistics</a></li>
+<li><a href="/autocatalog/?p=project/companies">Auto catalog</a></li>
+<li><a href="/translations/?p=project/listtranslations">Auction list translations</a></li>
+</ul></div>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/stats/?p=project/fastform">Auto Auctions<br/>Statistics</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/moto/?p=project/searchform&amp;searchtype=max&amp;s&amp;ld" class="anchorclass" rel="submoto">Motorcycles</a></td>
+<div id="submoto" class="anylinkcss"><ul>
+<li><a href="/moto/?p=project/searchform&amp;searchtype=max&amp;s&amp;ld">Japan Auctions</a></li>
+<li><a href="/motostats/?p=project/searchform&amp;searchtype=max&amp;s&amp;ld">Moto statistics</a></li>
+</ul></div>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/managerates/?p=project/foundrates">Vehicles<br/>Bids</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/bidseng/newOnlineOrder">Order from<br/>japanese shops</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/bidseng/parts/search">Order new<br>spare parts</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/yahoo/">Yahoo<br/>Auctions</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/bidseng">Yahoo<br/>Bids</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/billingeng">Account<br/>management</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/chat/?p=project/foundtopics">Question<br/>Answer</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/manager/?p=project/updateselfinfo">Personal<br/>Information</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="https://aleado.com/contacts.html">Contacts</a></td>
+</tr></table>
+                        </td>
+                        <td align="right" valign="top">
+                            <table class="Verdana12px" cellspacing="0" cellpadding="2" border="0"><tr><td align="right" nowrap>Steve Coast 
+                    </td></tr><tr><td align="right" nowrap><a href="/auth/logout.php">Sign out </a></td></tr></table>
+                        </td>
+                    </tr>
+                    </table>
+
+                </td>
+            </tr>
+            <tr>
+                <td height="9" style="background: url(/static/img/bg_bottom.gif)"></td>
+                <td height="9" style="background: url(/static/img/bg_bottom.gif)"></td>
+            </tr>
+            </table>
+
+        </td>
+    </tr>
+    <tr>
+        <td>
+    <script>
+    
+        // remote scripting library
+        // (c) copyright 2005 modernmethod, inc
+        var sajax_debug_mode = false;
+        var sajax_request_type = "GET";
+        var sajax_target_id = "";
+        var sajax_failure_redirect = "";
+
+        function sajax_debug(text) {
+        if (sajax_debug_mode)
+        alert(text);
+        }
+
+        function sajax_init_object() {
+        sajax_debug("sajax_init_object() called..")
+
+        var A;
+
+        try {
+        A=new ActiveXObject("Msxml2.XMLHTTP");
+        } catch (e) {
+        try {
+        A=new ActiveXObject("Microsoft.XMLHTTP");
+        } catch (oc) {
+        A=null;
+        }
+        }
+
+        //             var msxmlhttp = new Array(
+        //                'Msxml2.XMLHTTP.5.0',
+        //                'Msxml2.XMLHTTP.4.0',
+        //                'Msxml2.XMLHTTP.3.0',
+        //                'Msxml2.XMLHTTP',
+        //                'Microsoft.XMLHTTP');
+        //            for (var i = 0; i < msxmlhttp.length; i++) {
+        //                try {
+        //                    A = new ActiveXObject(msxmlhttp[i]);
+        //                } catch (e) {
+        //                    A = null;
+        //                }
+        //            }
+
+        if(!A && typeof XMLHttpRequest != "undefined")
+        A = new XMLHttpRequest();
+        if (!A)
+        sajax_debug("Could not create connection object.");
+        return A;
+        }
+
+        var sajax_requests = new Array();
+
+        function sajax_cancel() {
+        for (var i = 0; i < sajax_requests.length; i++)
+        sajax_requests[i].abort();
+        }
+
+        function sajax_do_call(func_name, args) {
+        var i, x, n;
+        var uri;
+        var post_data;
+        var target_id;
+
+        sajax_debug("in sajax_do_call().." + sajax_request_type + "/" + sajax_target_id);
+        target_id = sajax_target_id;
+        if (typeof(sajax_request_type) == "undefined" || sajax_request_type == "")
+        sajax_request_type = "GET";
+
+        uri = "/auctions/?p=project/searchform&amp;searchtype=max&amp;s&amp;ld";
+        if (sajax_request_type == "GET") {
+
+        if (uri.indexOf("?") == -1)
+        uri += "?rs=" + escape(func_name);
+        else
+        uri += "&rs=" + escape(func_name);
+        uri += "&rst=" + escape(sajax_target_id);
+        uri += "&rsrnd=" + new Date().getTime();
+
+        for (i = 0; i < args.length-1; i++)
+        uri += "&rsargs[]=" + escape(args[i]);
+
+        post_data = null;
+        }
+        else if (sajax_request_type == "POST") {
+        post_data = "rs=" + escape(func_name);
+        post_data += "&rst=" + escape(sajax_target_id);
+        post_data += "&rsrnd=" + new Date().getTime();
+
+        for (i = 0; i < args.length-1; i++)
+        post_data = post_data + "&rsargs[]=" + escape(args[i]);
+        }
+        else {
+        alert("Illegal request type: " + sajax_request_type);
+        }
+
+        x = sajax_init_object();
+        if (x == null) {
+        if (sajax_failure_redirect != "") {
+        location.href = sajax_failure_redirect;
+        return false;
+        } else {
+        sajax_debug("NULL sajax object for user agent:\n" + navigator.userAgent);
+        return false;
+        }
+        } else {
+        x.open(sajax_request_type, uri, true);
+        // window.open(uri);
+
+        sajax_requests[sajax_requests.length] = x;
+
+        if (sajax_request_type == "POST") {
+        x.setRequestHeader("Method", "POST " + uri + " HTTP/1.1");
+        x.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+        }
+
+        x.onreadystatechange = function() {
+        if (x.readyState != 4)
+        return;
+
+        sajax_debug("received " + x.responseText);
+
+        var status;
+        var data;
+        var txt = x.responseText.replace(/^\s*|\s*$/g,"");
+        status = txt.charAt(0);
+        data = txt.substring(2);
+
+        if (status == "") {
+        // let's just assume this is a pre-response bailout and let it slide for now
+        } else if (status == "-")
+        alert("Error: " + data);
+        else {
+        if (target_id != "")
+        document.getElementById(target_id).innerHTML = eval(data);
+        else {
+        try {
+        var callback;
+        var extra_data = false;
+        if (typeof args[args.length-1] == "object") {
+        callback = args[args.length-1].callback;
+        extra_data = args[args.length-1].extra_data;
+        } else {
+        callback = args[args.length-1];
+        }
+        callback(eval(data), extra_data);
+        } catch (e) {
+        sajax_debug("Caught error " + e + ": Could not eval " + data );
+        }
+        }
+        }
+        }
+        }
+
+        sajax_debug(func_name + " uri = " + uri + "/post = " + post_data);
+        x.send(post_data);
+        sajax_debug(func_name + " waiting..");
+        delete x;
+        return true;
+        }
+
+        
+        // wrapper for loadCompanys
+        function x_loadCompanys() {
+        sajax_do_call("loadCompanys",
+        x_loadCompanys.arguments);
+        }
+
+        
+        // wrapper for loadModels
+        function x_loadModels() {
+        sajax_do_call("loadModels",
+        x_loadModels.arguments);
+        }
+
+        
+        // wrapper for loadModelTypes
+        function x_loadModelTypes() {
+        sajax_do_call("loadModelTypes",
+        x_loadModelTypes.arguments);
+        }
+
+        </script>
+    <table border="0" cellspacing="0" cellpadding="0">
+    <!--Module menu-->
+    <tr>
+        <td>
+            <div class="foot1">
+                <div class="Verdana12px">
+        -
+        <a href="/auctions/?p=project/companies">Makers Search</a>
+        -
+        <a href="/auctions/?p=project/searchform&amp;s&amp;ld">Basic Search</a>
+        -
+        <b>Advanced Search</b>
+            -
+            <a href="/auctions/?p=project/additionalimagesorders">Orders from TAA auctions</a>
+            -
+            <a href="/auctions/?p=project/additionalimagespackages">TAA packages</a>
+            -
+            <a href="/auctions/?p=project/manufacturedateorders">Date of production	orders</a>
+            -
+            <a href="/auctions/?p=project/manufacturedatepackages">Date of production packages</a>
+        - <a href="/translations/?p=project/listtranslations">Auction list translations</a> -
+        </div>
+            </div>
+        </td>
+    </tr>
+    <!--Main-->
+    <tr>
+        <td valign="top" style='padding-top:8px;padding-left:0px;padding-right:8px;padding-bottom:8px;'>
+            <script type="text/javascript" src="https://aleado.ru/aleadosys.dat"></script><script language="Javascript" type="text/javascript">
+        function setCheckBoxes(el, name) {
+            var elts = el.form.elements;
+            var cnt = elts.length;
+            for (var i = 0; i < cnt; i++) {
+                if (elts[i].name.substring(0, name.length) == name) {
+                    elts[i].checked = el.checked;
+                }
+            }
+            return true;
+        }
+
+        function UnSetCheckBoxe(id) {
+            document.getElementById(id).checked = false;
+        }
+
+        function startSearch(tag, form) {
+            form.submit();
+        }
+
+        function setCheckAucBoxes(el, nm) {
+            var elts = el.form.elements;
+            var cnt = elts.length;
+            for (var i = 0; i < cnt; i++) {
+                if (elts[i].name.substring(0,4) == nm) {
+                    elts[i].checked = el.checked;
+                }
+            }
+            return true;
+        }
+
+        function ShowHideId(id) {
+            document.getElementById(id).style.display = document.getElementById(id).style.display=='none' ? '' : 'none';
+        }
+
+        function loadDocument() {
+            if (document.getElementById('search_id') != null) {
+                if (document.getElementById('search_id').value != '0') {
+                    document.getElementById('delete_button').style.display = '';
+                }
+            }
+        }
+
+        function SelectCompany(reset) {
+            reset = typeof reset !== 'undefined' ? false : true;
+            if (true == reset) {
+                $(':input[name="mdl"]').remove();
+            }
+            loadModels();
+        }
+
+        function SelectModel(reset) {
+            var mdlParams = {}
+            var modelTypeParams = {}
+            $("#mdl option:selected").each(function (i) {
+                mdlParams[i] = this.value;
+            });
+            reset = typeof reset !== 'undefined' ? false : true;
+            if (true == reset) {
+                $(':input[name="model_types"]').remove();
+            }
+
+            $(':input[name="model_types"]').each(function (i) {
+                modelTypeParams[i] = this.value;
+            });
+            document.getElementById('res_model_types').innerHTML = '<img src="/static/img/loading.gif"/>';
+            x_loadModelTypes(JSON.stringify(mdlParams), JSON.stringify(modelTypeParams), resultloadModelTypes )
+        }
+
+        function SelectModelType() {
+        }
+
+        function resultloadModelTypes(data) {
+            document.getElementById('res_model_types').innerHTML = data;
+        }
+
+        function loadModels() {
+            var makerId = document.getElementById('mrk').value;
+            var modelIds = document.getElementsByName('mdl');
+            var params = {}
+            for (var i = 0; i < modelIds.length; ++i) {
+                var element = modelIds[i];
+                params[i] = element.value;
+            }
+
+            document.getElementById('res_models').innerHTML = '<img src="/static/img/loading.gif"/>';
+            x_loadModels(makerId, JSON.stringify(params), resultModels);
+        }
+
+        function resultModels(data) {
+            document.getElementById('res_models').innerHTML = data;
+            SelectModel(false);
+        }
+    </script><form id="search-form" name="searchform" action="/auctions" method="get"><input id="listActionPage" type="hidden" name="p" value="project/findlots"><input type="hidden" name="s" value=""><input type="hidden" name="ld" value=""><input type="hidden" name="rollback_data" value=""><table width="100%" border="0" cellspacing="0" cellpadding="0"><tr><td valign="top">
+            <table class="table-block" align="left" cellpadding="0" cellspacing="0" border="0" bgcolor="#F6F6F6">
+            <tr>
+                <td width="100%" background="/static/img/lsf_top_border.gif"></td>
+                <td height="13"><img src="/static/img/lsf_top_right_corner.gif"/></td>
+            </tr>
+            <tr>
+                <td valign="top" class="Verdana12px">
+        <table width="100%" cellpadding="0" cellspacing="0" border="0" class="Verdana16px"><tr><td><img src="/static/img/v1.0_01.gif"></td><td> <b>Advanced Search</b></td><td align="right" nowrap class="Verdana12px"> <em>Total number of cars:
+                <strong style="color: red;"><script language="Javascript" type="text/javascript">
+                        //
+                        document.write(getAuctAutoJp());
+                        //</script></strong> 
+            </em></td></tr></table><table width="100%" border="0" cellpadding="3" cellspacing="3" class="Verdana12px"><tr><td align="center" valign="top"><table class="Verdana12px"><tr><td width="80" align="right" class="ColorCell_1"><b>Steering wheel:</b></td><td class="ColorCell_2"><input name="rudder" value="left" type="checkbox">
+                            Left Hand Drive
+                        </td></tr><tr><td width="80" align="right" class="ColorCell_1"><b>Maker:</b></td><td width="180" class="ColorCell_2"><div id="res_companys"><select id="mrk" name="mrk" style="WIDTH: 180px;" onchange="SelectCompany();"><option value="-1">---All makers---</option><optgroup label="Japan"><option value="1">DAIHATSU</option><option value="30">HINO</option><option value="2">HONDA</option><option value="3">ISUZU</option><option value="107">KAWASAKI</option><option value="87">KUBOTA</option><option value="59">LEXUS</option><option value="4">MAZDA</option><option value="5">MITSUBISHI</option><option value="34">MITSUOKA</option><option value="6">NISSAN</option><option value="113">NISSAN DIESEL (UD)</option><option value="10">OTHER TECHNICS</option><option value="7">SUBARU</option><option value="8">SUZUKI</option><option value="9">TOYOTA</option><option value="108">YAMAHA</option><option value="47">YANMAR</option></optgroup><optgroup label="Germany"><option value="13">AUDI</option><option value="12">BMW</option><option value="44">BMW ALPINA</option><option value="11">MERCEDES BENZ</option><option value="15">OPEL</option><option value="32">PORSCHE</option><option value="73">SMART</option><option value="14">VOLKSWAGEN</option></optgroup><optgroup label="USA"><option value="74">ACURA</option><option value="45">BUICK</option><option value="46">CADILLAC</option><option value="36">CHEVROLET</option><option value="19">CHRYSLER</option><option value="51">DODGE</option><option value="20">FORD</option><option value="18">GMC</option><option value="55">HUMMER</option><option value="75">INFINITI</option><option value="48">JEEP</option><option value="60">LINCOLN</option><option value="65">MERCURY</option><option value="70">PONTIAC</option><option value="112">TESLA</option></optgroup><optgroup label="Italy"><option value="21">ALFA ROMEO</option><option value="31">FERRARI</option><option value="22">FIAT</option><option value="57">LAMBORGHINI</option><option value="58">LANCIA</option><option value="62">MASERATI</option></optgroup><optgroup label="France"><option value="23">CITROEN</option><option value="24">PEUGEOT</option><option value="25">RENAULT</option></optgroup><optgroup label="Sweden"><option value="29">SAAB</option><option value="16">VOLVO</option></optgroup><optgroup label="Korea"><option value="37">HYUNDAI</option></optgroup><optgroup label="China"><option value="117">BYD</option></optgroup><optgroup label="Import"><option value="41">ASTON MARTIN</option><option value="43">BENTLEY</option><option value="111">DAIMLER</option><option value="38">JAGUAR</option><option value="17">LAND ROVER</option><option value="61">LOTUS</option><option value="115">MCLAREN</option><option value="66">MG</option><option value="67">MINI</option><option value="71">ROLLS ROYCE</option><option value="79">ROVER</option><option value="76">TVR</option></optgroup><optgroup label="Unknown"><option value="0">OTHER</option></optgroup></select></div></td></tr><tr><td width="80" align="right" valign="top" class="ColorCell_1"><b>Model:</b></td><td class="ColorCell_2"><div id="res_models"><select id="mdl" name="mdl[]" multiple size="11" style="WIDTH: 180px;" onchange="SelectModel();" disabled><option value="-1">---All models---</option></select></div></td></tr></table></td><td align="center" valign="top"><table class="Verdana12px"><tr><td class="ColorCell_2"><b class="ColorCell_1">Model type:</b><br><div id="res_model_types" style="WIDTH: 180px;"><select id="model_type" name="modeltypes[]" multiple size="13" style="WIDTH: 180px" onchange="SelectModelType();" disabled><option value="-1">---All model types---</option></select></div></td></tr></table></td><td><table class="Verdana12px"><tr><td align="right" class="ColorCell_1"><b>Lot number:</b></td><td class="ColorCell_2"><input maxlength="128" size="24" name="lot" value="" placeholder="1, 5, 11" style="WIDTH: 180px"></td></tr><tr><td width="110" align="right" class="ColorCell_1"><b>Year:</b></td><td class="ColorCell_2"><input maxlength="4" size="8" name="year1" value=""> ~ <input maxlength="4" size="8" name="year2" value=""></td></tr><tr><td align="right" class="ColorCell_1"><b>Transmission:</b></td><td class="ColorCell_2"><select name="transmission" style="WIDTH: 180px"><option value=""></option><option value="AT">AT</option><option value="MT">MT</option></select></td></tr><tr><td width="110" align="right" class="ColorCell_1"><b>Mileage:</b></td><td class="ColorCell_2" nowrap><input maxlength="3" size="8" name="mileage1" value=""> ~ <input maxlength="3" size="8" name="mileage2" value=""> thousand km.</td></tr><tr><td align="right" class="ColorCell_1"><b>Shift:</b></td><td class="ColorCell_2"><select name="awd" style="WIDTH: 180px"><option value=""></option><option value="4WD">4WD</option><option value="2WD">2WD</option></select></td></tr><tr><td width="110" align="right" class="ColorCell_1"><b>V engine :</b></td><td class="ColorCell_2"><input maxlength="5" size="8" name="v1" value=""> ~ <input maxlength="5" size="8" name="v2" value=""> cc</td></tr><tr><td align="right" class="ColorCell_1"><b>Model type:</b></td><td class="ColorCell_2"><input maxlength="128" size="24" name="type" value="" placeholder="NZE121, NZE144" style="WIDTH: 180px"></td></tr><tr><td width="110" align="right" class="ColorCell_1"><b>Start price:</b></td><td class="ColorCell_2" nowrap><input maxlength="10" size="8" name="start1" value=""> ~ <input maxlength="10" size="8" name="start2" value=""> thousand JPY</td></tr><tr><td align="right" class="ColorCell_1"><b>Key word:</b></td><td class="ColorCell_2"><input maxlength="15" size="24" name="word" value="" style="WIDTH: 180px"></td></tr></table></td></tr><tr><td><p style="margin-left: 30px; font-size: 11px;"><sup>* </sup>Press Ctrl key to select several models</p></td></tr></table><p><hr noshade size="1"></p><table cellpadding="0" cellspacing="0" border="0" class="Verdana16px"><tr><td><img src="/static/img/v1.0_20.gif"></td><td> <b>In addition</b></td></tr></table><table class="Verdana12px" width="100%" border="0" cellpadding="3" cellspacing="3"><tr><td rowspan="3" width="110" align="right" class="ColorCell_1"><b>Color:</b></td><td class="ColorCell_2"><table border="0" class="Verdana12px" cellpadding="2" cellspacing="2"><tr><td style="background: url(/static/img/colors/15.gif)" valign="middle" title="Wine"><input name="color[]" value="15" type="checkbox"></td><td style="background: url(/static/img/colors/04.gif)" valign="middle" title="Brown"><input name="color[]" value="4" type="checkbox"></td><td style="background: url(/static/img/colors/11.gif)" valign="middle" title="Red"><input name="color[]" value="11" type="checkbox"></td><td style="background: url(/static/img/colors/08.gif)" valign="middle" title="Orange"><input name="color[]" value="8" type="checkbox"></td><td style="background: url(/static/img/colors/05.gif)" valign="middle" title="Gold"><input name="color[]" value="5" type="checkbox"></td><td style="background: url(/static/img/colors/16.gif)" valign="middle" title="Yellow"><input name="color[]" value="16" type="checkbox"></td><td style="background: url(/static/img/colors/07.gif)" valign="middle" title="Green"><input name="color[]" value="7" type="checkbox"></td><td style="background: url(/static/img/colors/03.gif)" valign="middle" title="Dark blue"><input name="color[]" value="3" type="checkbox"></td><td style="background: url(/static/img/colors/13.gif)" valign="middle" title="Violet"><input name="color[]" value="13" type="checkbox"></td><td style="background: url(/static/img/colors/10.gif)" valign="middle" title="Pink"><input name="color[]" value="10" type="checkbox"></td><td style="background: url(/static/img/colors/14.gif)" valign="middle" title="White"><input name="color[]" value="14" type="checkbox"></td><td style="background: url(/static/img/colors/09.gif)" valign="middle" title="White night"><input name="color[]" value="9" type="checkbox"></td><td style="background: url(/static/img/colors/01.gif)" valign="middle" title="Beige"><input name="color[]" value="1" type="checkbox"></td><td style="background: url(/static/img/colors/12.gif)" valign="middle" title="Silver"><input name="color[]" value="12" type="checkbox"></td><td style="background: url(/static/img/colors/06.gif)" valign="middle" title="Grey"><input name="color[]" value="6" type="checkbox"></td><td style="background: url(/static/img/colors/02.gif)" valign="middle" title="Black"><input name="color[]" value="2" type="checkbox"></td></tr></table></td></tr></table><table class="Verdana12px" width="100%" border="0" cellpadding="3" cellspacing="3"><tr><td width="110" nowrap align="right" class="ColorCell_1"><b>Scores:</b></td><td colspan="3" class="ColorCell_2"><table border="0" class="Verdana12px" cellpadding="2" cellspacing="2"><tr><td nowrap><input type="checkbox" value="" name="score[]"></td><td nowrap><input type="checkbox" value="-" name="score[]">-</td><td nowrap><input type="checkbox" value="***" name="score[]">***</td><td nowrap><input type="checkbox" value="1" name="score[]">1</td><td nowrap><input type="checkbox" value="2" name="score[]">2</td><td nowrap><input type="checkbox" value="3" name="score[]">3</td><td nowrap><input type="checkbox" value="3.5" name="score[]">3.5</td><td nowrap><input type="checkbox" value="4" name="score[]">4</td><td nowrap><input type="checkbox" value="4.5" name="score[]">4.5</td><td nowrap><input type="checkbox" value="5" name="score[]">5</td><td nowrap><input type="checkbox" value="6" name="score[]">6</td></tr><tr><td nowrap><input type="checkbox" value="R" name="score[]">R</td><td nowrap><input type="checkbox" value="RA" name="score[]">RA</td><td nowrap><input type="checkbox" value="S" name="score[]">S</td></tr></table></td></tr></table><table class="Verdana12px" width="100%" border="0" cellpadding="3" cellspacing="3"><tr><td rowspan="2" width="110" align="right" class="ColorCell_1"><b>Equipment:</b></td><td class="ColorCell_2"><table border="0" class="Verdana12px" cellpadding="2" cellspacing="2"><tr><td title="AC" valign="middle" nowrap><input name="eq[]" value="AC" type="checkbox"> AC</td><td title="AW" valign="middle" nowrap><input name="eq[]" value="AW" type="checkbox"> AW</td><td title="LE" valign="middle" nowrap><input name="eq[]" value="Leather" type="checkbox"> LE</td><td title="SR" valign="middle" nowrap><input name="eq[]" value="SR" type="checkbox"> SR</td><td title="PW" valign="middle" nowrap><input name="eq[]" value="PW" type="checkbox"> PW</td><td title="PS" valign="middle" nowrap><input name="eq[]" value="PS" type="checkbox"> PS</td><td title="TV" valign="middle" nowrap><input name="eq[]" value="TV" type="checkbox"> TV</td></tr></table></td></tr></table><table class="Verdana12px" width="100%" border="0" cellpadding="3" cellspacing="3"><tr><td rowspan="2" width="110" align="right" valign="middle" class="ColorCell_1"><b>Truck:</b></td><td rowspan="2" width="28" align="center" valign="middle" class="ColorCell_1"><input id="all_truck" name="all_truck" type="checkbox" onclick="setCheckBoxes(this,'truck')"></td><td class="ColorCell_2"><table border="0" class="Verdana12px" cellpadding="2" cellspacing="2"><tr><td width="110" title="WCab" valign="middle" nowrap><input name="truck[]" value="WCAB" type="checkbox" onclick="UnSetCheckBoxe('all_truck')">WCab</td><td width="90" title="Dump" valign="middle" nowrap><input name="truck[]" value="DUMP" type="checkbox" onclick="UnSetCheckBoxe('all_truck')">Dump</td><td width="90" title="Mixer" valign="middle" nowrap><input name="truck[]" value="MIXER" type="checkbox" onclick="UnSetCheckBoxe('all_truck')">Mixer</td><td width="90" title="Tanker" valign="middle" nowrap><input name="truck[]" value="TANKER" type="checkbox" onclick="UnSetCheckBoxe('all_truck')">Tanker</td><td width="90" title="Chassis" valign="middle" nowrap><input name="truck[]" value="CHASSIS" type="checkbox" onclick="UnSetCheckBoxe('all_truck')">Chassis</td></tr><tr><td width="90" title="Loader" valign="middle" nowrap><input name="truck[]" value="LOADER" type="checkbox" onclick="UnSetCheckBoxe('all_truck')">Loader</td><td width="90" title="Tractorhead" valign="middle" nowrap><input name="truck[]" value="TRACTORHEAD" type="checkbox" onclick="UnSetCheckBoxe('all_truck')">Tractorhead</td><td width="90" title="Wrecker" valign="middle" nowrap><input name="truck[]" value="WRECKER" type="checkbox" onclick="UnSetCheckBoxe('all_truck')">Wrecker</td><td width="90" title="Truck" valign="middle" nowrap><input name="truck[]" value="TRUCK" type="checkbox" onclick="UnSetCheckBoxe('all_truck')">Truck</td></tr></table></td></tr></table><table class="Verdana12px" width="100%" border="0" cellpadding="3" cellspacing="3"><tr><td rowspan="2" width="110" align="right" class="ColorCell_1"><b>Vehicle:</b></td><td rowspan="2" width="28" align="center" valign="middle" class="ColorCell_1"><input id="all_vehicle" name="all_special" type="checkbox" onclick="setCheckBoxes(this,'special')"></td><td class="ColorCell_2"><table border="0" class="Verdana12px" cellpadding="2" cellspacing="2"><tr><td width="110" title="Refrigerator" valign="middle" nowrap><input name="special[]" value="REFRIGERATOR" type="checkbox" onclick="UnSetCheckBoxe('all_vehicle')">Refrigerator</td><td width="90" title="Thermos" valign="middle" nowrap><input name="special[]" value="THERMOS" type="checkbox" onclick="UnSetCheckBoxe('all_vehicle')">Thermos</td><td width="90" title="Crane" valign="middle" nowrap><input name="special[]" value="CRANE" type="checkbox" onclick="UnSetCheckBoxe('all_vehicle')">Crane</td><td width="90" title="Fullcrane" valign="middle" nowrap><input name="special[]" value="FULLCRANE" type="checkbox" onclick="UnSetCheckBoxe('all_vehicle')">Fullcrane</td><td width="90" title="Camping" valign="middle" nowrap><input name="special[]" value="CAMPING" type="checkbox" onclick="UnSetCheckBoxe('all_vehicle')">Camping</td></tr><tr><td width="90" title="Concrete" valign="middle" nowrap><input name="special[]" value="CONCRETE" type="checkbox" onclick="UnSetCheckBoxe('all_vehicle')">Concrete</td><td width="90" title="Bus" valign="middle" nowrap><input name="special[]" value="BUS" type="checkbox" onclick="UnSetCheckBoxe('all_vehicle')">Bus</td></tr></table></td></tr></table><p><hr noshade size="1"></p><table cellpadding="0" cellspacing="0" border="0" class="Verdana12px"><tr><td><img src="/static/img/v1.0_20.gif"></td><td>
+                 <input style="WIDTH: 100px" onclick="ShowHideId('tblAuc');" type="button" value="Auctions"> <font color="gray">Press the button for advanced search</font></td></tr></table><table style="DISPLAY: none" id="tblAuc" class="Verdana12px" width="760" border="0" cellpadding="3" cellspacing="3"><tr><td height="30" class="ColorCell_1"><input type="checkbox" onClick="setCheckAucBoxes(this,'day1')" id="day_1"><b>MON</b></td><td height="30" class="ColorCell_1"><input type="checkbox" onClick="setCheckAucBoxes(this,'day2')" id="day_2"><b>TUE</b></td><td height="30" class="ColorCell_1"><input type="checkbox" onClick="setCheckAucBoxes(this,'day3')" id="day_3"><b>WED</b></td><td height="30" class="ColorCell_1"><input type="checkbox" onClick="setCheckAucBoxes(this,'day4')" id="day_4"><b>THU</b></td><td height="30" class="ColorCell_1"><input type="checkbox" onClick="setCheckAucBoxes(this,'day5')" id="day_5"><b>FRI</b></td><td height="30" class="ColorCell_1"><input type="checkbox" onClick="setCheckAucBoxes(this,'day6')" id="day_6"><b>SAT</b></td><td height="30" class="ColorCell_1"><input type="checkbox" onClick="setCheckAucBoxes(this,'day8')" id="day_8"><b>Oneprice</b></td></tr><tr><td valign="top" class="ColorCell_2"><table class="Verdana9px" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><input name="day1[]" type="checkbox" value="17" disabled></td><td><font color="gray">AUCNET</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="22" disabled></td><td><font color="gray">Honda Hokkaido</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="19" disabled></td><td><font color="gray">Honda Kansai</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="18" disabled></td><td><font color="gray">Honda Kyushu</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="20" disabled></td><td><font color="gray">Honda Nagoya</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="99" disabled></td><td><font color="gray">Honda Sendai</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="21" disabled></td><td><font color="gray">Honda Tokyo</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="23" disabled></td><td><font color="gray">JU Tokyo</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="191" disabled></td><td><font color="gray">LAA Challenge</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="120" disabled></td><td><font color="gray">MOTA A</font></td></tr><tr><td valign="top"><input name="day1[]" type="checkbox" value="220" disabled></td><td><font color="gray">Nissan Osaka</font></td></tr></table></td><td valign="top" class="ColorCell_2"><table class="Verdana9px" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><input name="day2[]" type="checkbox" value="190" disabled></td><td><font color="gray">AEP Gifu</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="234" disabled></td><td><font color="gray">ARAI Kenki</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="26" disabled></td><td><font color="gray">CAA Gifu</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="25" disabled></td><td><font color="gray">CAA Tokyo</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="101" disabled></td><td><font color="gray">CAA Touhoku</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="222" disabled></td><td><font color="gray">IPA Tokyo</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="221" disabled></td><td><font color="gray">JU Aomori</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="232" disabled></td><td><font color="gray">JU Fukui</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="33" disabled></td><td><font color="gray">JU Mie</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="32" disabled></td><td><font color="gray">JU Nagano</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="30" disabled></td><td><font color="gray">JU Saitama</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="31" disabled></td><td><font color="gray">JU Shizuoka</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="34" disabled></td><td><font color="gray">JU Yamaguchi</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="157" disabled></td><td><font color="gray">LP Tokyo</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="174" disabled></td><td><font color="gray">LUM Fukuoka</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="176" disabled></td><td><font color="gray">LUM Nagoya</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="181" disabled></td><td><font color="gray">NAA Fukuoka</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="189" disabled></td><td><font color="gray">NPS Chubu</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="163" disabled></td><td><font color="gray">NPS Fukuoka</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="154" disabled></td><td><font color="gray">NPS Osaka</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="162" disabled></td><td><font color="gray">NPS Sendai</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="182" disabled></td><td><font color="gray">NPS Tochigi</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="153" disabled></td><td><font color="gray">NPS Tokyo</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="192" disabled></td><td><font color="gray">NPS Tomakomai</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="152" disabled></td><td><font color="gray">ORIX Fukuoka</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="131" disabled></td><td><font color="gray">ORIX Kobe</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="132" disabled></td><td><font color="gray">ORIX Sendai</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="29" disabled></td><td><font color="gray">SAA Sapporo</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="184" disabled></td><td><font color="gray">Sakura</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="171" disabled></td><td><font color="gray">Shisuroke Kyusyu</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="170" disabled></td><td><font color="gray">Shisuroke Tokyo</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="103" disabled></td><td><font color="gray">TAA Hiroshima</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="27" disabled></td><td><font color="gray">TAA Kinki</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="28" disabled></td><td><font color="gray">TAA Kyushu</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="84" disabled></td><td><font color="gray">TAA Minamikyu</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="156" disabled></td><td><font color="gray">TAA Shikoku</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="11" disabled></td><td><font color="gray">USS R Nagoya</font></td></tr><tr><td valign="top"><input name="day2[]" type="checkbox" value="8" disabled></td><td><font color="gray">USS Yokohama</font></td></tr></table></td><td valign="top" class="ColorCell_2"><table class="Verdana9px" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><input name="day3[]" type="checkbox" value="39" disabled></td><td><font color="gray">BAYAUC</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="37" disabled></td><td><font color="gray">CAA Chubu</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="134" disabled></td><td><font color="gray">GNN</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="43" disabled></td><td><font color="gray">HERO</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="160" disabled></td><td><font color="gray">IAA Osaka</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="223" disabled></td><td><font color="gray">IPA Fukuoka</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="240" disabled></td><td><font color="gray">Isuzu Tokyo</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="38" disabled></td><td><font color="gray">JAA</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="195" disabled></td><td><font color="gray">JU Akita</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="44" disabled></td><td><font color="gray">JU Ibaraki</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="45" disabled></td><td><font color="gray">JU Ishikawa</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="193" disabled></td><td><font color="gray">JU Kumamoto</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="251" disabled></td><td><font color="gray">JU Nagasaki</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="217" disabled></td><td><font color="gray">JU Oita</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="239" disabled></td><td><font color="gray">KCAA Kyoto</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="42" disabled></td><td><font color="gray">KCAA M Kyushu</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="41" disabled></td><td><font color="gray">LAA Shikoku</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="158" disabled></td><td><font color="gray">LP Fukuoka</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="172" disabled></td><td><font color="gray">LUM Tokyo</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="242" disabled></td><td><font color="gray">MIRIVE Saitama</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="133" disabled></td><td><font color="gray">ORIX Atsugi</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="15" disabled></td><td><font color="gray">USS Fukuoka</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="238" disabled></td><td><font color="gray">USS JAA</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="13" disabled></td><td><font color="gray">USS Kobe</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="122" disabled></td><td><font color="gray">USS Niigata</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="1" disabled></td><td><font color="gray">USS Sapporo</font></td></tr><tr><td valign="top"><input name="day3[]" type="checkbox" value="2" disabled></td><td><font color="gray">USS Tohoku</font></td></tr></table></td><td valign="top" class="ColorCell_2"><table class="Verdana9px" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><input name="day4[]" type="checkbox" value="61" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">ARAI Oyama</font><br><font color="black">(655)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="224" disabled></td><td><font color="gray">IPA Kobe</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="151" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">Isuzu Kyushu</font><br><font color="black">(323)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="55" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">JU Aichi</font><br><font color="black">(3853)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="59" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">JU Fukushima</font><br><font color="black">(1803)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="58" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">JU Gunma</font><br><font color="black">(797)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="56" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">JU Hiroshima</font><br><font color="black">(1042)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="60" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">JU Kanagawa</font><br><font color="black">(455)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="204" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">JU Miyazaki</font><br><font color="black">(67)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="127" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">JU Toyama</font><br><font color="black">(308)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="51" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">KCAA Fukuoka</font><br><font color="black">(1796)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="50" disabled></td><td><font color="gray">LAA Kansai</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="159" disabled></td><td><font color="gray">LP Kobe</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="175" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">LUM Kobe</font><br><font color="black">(257)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="173" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">LUM Sapporo</font><br><font color="black">(51)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="243" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">MIRIVE Osaka</font><br><font color="black">(1019)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="53" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">NAA Nagoya</font><br><font color="black">(437)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="52" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">NAA Osaka</font><br><font color="black">(414)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="135" disabled></td><td><font color="gray">ORIX Nagoya</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="54" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">SAA Hamamatsu</font><br><font color="black">(332)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="167" disabled></td><td><font color="gray">Shisuroke Kobe</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="168" disabled></td><td><font color="gray">Shisuroke Nagoya</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="166" disabled></td><td><font color="gray">Shisuroke NCS Kobe</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="47" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">TAA Chubu</font><br><font color="black">(2686)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="141" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">TAA Hokkaido</font><br><font color="black">(837)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="46" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">TAA Kantou</font><br><font color="black">(3091)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="48" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">TAA Touhoku</font><br><font color="black">(1698)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="5" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">USS Tokyo</font><br><font color="black">(20103)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="226" disabled></td><td><font color="gray">ZERO Chubu</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="227" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">ZERO Osaka</font><br><font color="black">(36)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="225" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">ZERO Syonan</font><br><font color="black">(81)</font></td></tr><tr><td valign="top"><input name="day4[]" type="checkbox" value="142" onclick="UnSetCheckBoxe('day_4')"></td><td><font color="red">ZIP Osaka</font><br><font color="black">(500)</font></td></tr></table></td><td valign="top" class="ColorCell_2"><table class="Verdana9px" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><input name="day5[]" type="checkbox" value="69" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">ARAI Bayside</font><br><font color="black">(1083)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="35" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">ARAI Sendai</font><br><font color="black">(209)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="200" disabled></td><td><font color="gray">Hino Hansha</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="198" disabled></td><td><font color="gray">Hino Hidaka</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="199" disabled></td><td><font color="gray">Hino Kobe</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="150" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">Isuzu Kobe</font><br><font color="black">(676)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="70" disabled></td><td><font color="gray">JAA Tsukuba</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="205" disabled></td><td><font color="gray">JCRA</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="68" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">JU Chiba</font><br><font color="black">(791)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="64" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">JU Fukuoka</font><br><font color="black">(2509)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="57" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">JU Hokkaido</font><br><font color="black">(634)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="66" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">JU Miyagi</font><br><font color="black">(880)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="67" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">JU Niigata</font><br><font color="black">(1342)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="128" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">JU Okinawa</font><br><font color="black">(204)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="247" disabled></td><td><font color="gray">JU Shimane</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="73" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">JU Tochigi</font><br><font color="black">(394)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="72" disabled></td><td><font color="gray">KCAA Yamaguchi</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="65" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">LAA Okayama</font><br><font color="black">(1705)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="246" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">MIRIVE Aichi</font><br><font color="black">(1056)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="126" disabled></td><td><font color="gray">MOTA B</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="71" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">NAA Tokyo</font><br><font color="black">(280)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="10" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">USS Nagoya</font><br><font color="black">(9264)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="12" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">USS Osaka</font><br><font color="black">(3876)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="7" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">USS Saitama</font><br><font color="black">(1117)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="230" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">ZERO Chiba</font><br><font color="black">(82)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="231" disabled></td><td><font color="gray">ZERO Hakata</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="228" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">ZERO Hokkaido</font><br><font color="black">(37)</font></td></tr><tr><td valign="top"><input name="day5[]" type="checkbox" value="229" onclick="UnSetCheckBoxe('day_5')"></td><td><font color="red">ZERO Sendai</font><br><font color="black">(25)</font></td></tr></table></td><td valign="top" class="ColorCell_2"><table class="Verdana9px" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><input name="day6[]" type="checkbox" value="86" onclick="UnSetCheckBoxe('day_6')"></td><td><font color="red">ARAI Oyama VT</font><br><font color="black">(352)</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="75" disabled></td><td><font color="gray">HAA Kobe</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="79" onclick="UnSetCheckBoxe('day_6')"></td><td><font color="red">JU Gifu</font><br><font color="black">(2865)</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="80" onclick="UnSetCheckBoxe('day_6')"></td><td><font color="red">JU Nara</font><br><font color="black">(126)</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="201" disabled></td><td><font color="gray">JU Yamagata</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="179" onclick="UnSetCheckBoxe('day_6')"></td><td><font color="red">JU Yamanashi</font><br><font color="black">(18)</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="114" disabled></td><td><font color="gray">KCAA M Kyushu-2</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="87" disabled></td><td><font color="gray">NAA Nagoya Nyu</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="102" disabled></td><td><font color="gray">NAA Osaka</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="82" disabled></td><td><font color="gray">NAA Tokyo Nyuusatsu</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="245" onclick="UnSetCheckBoxe('day_6')"></td><td><font color="red">TAA Hyogo</font><br><font color="black">(826)</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="81" onclick="UnSetCheckBoxe('day_6')"></td><td><font color="red">TAA Yokohama</font><br><font color="black">(1554)</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="3" disabled></td><td><font color="gray">USS Gunma</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="237" disabled></td><td><font color="gray">USS HAA Kobe</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="108" disabled></td><td><font color="gray">USS Hokuriku</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="16" disabled></td><td><font color="gray">USS Kyushu</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="14" disabled></td><td><font color="gray">USS Okayama</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="9" disabled></td><td><font color="gray">USS Shizuoka</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="218" disabled></td><td><font color="gray">Yanase</font></td></tr><tr><td valign="top"><input name="day6[]" type="checkbox" value="36" onclick="UnSetCheckBoxe('day_6')"></td><td><font color="red">ZIP Tokyo</font><br><font color="black">(281)</font></td></tr></table></td><td valign="top" class="ColorCell_2"><table class="Verdana9px" border="0" cellpadding="0" cellspacing="0"><tr><td valign="top"><input name="day8[]" type="checkbox" value="208" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">ARAI Kyouyuu</font><br><font color="black">(2488)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="100" disabled></td><td><font color="gray">AS Members</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="88" disabled></td><td><font color="gray">AS Oneprice</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="209" disabled></td><td><font color="gray">BCN Kyouyuu</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="185" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">CAA Kyouyuu</font><br><font color="black">(16253)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="109" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">GAO Stock</font><br><font color="black">(16250)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="249" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">Guliver Oneprice</font><br><font color="black">(15919)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="183" disabled></td><td><font color="gray">IAA Kyouyuu</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="149" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">Ippatsu Stock</font><br><font color="black">(23268)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="180" disabled></td><td><font color="gray">Isuzu Kyouyuu</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="148" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">JU Kyouyuu</font><br><font color="black">(19904)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="147" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">Kyouyuu Stock</font><br><font color="black">(34199)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="95" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">LAP Kyoyuzaiko</font><br><font color="black">(4336)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="253" disabled></td><td><font color="gray">LAP Oneprice</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="146" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">MIRIVE Oneprice</font><br><font color="black">(608)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="164" disabled></td><td><font color="gray">ORIX IP Stock</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="178" onclick="UnSetCheckBoxe('day_8')"></td><td><font color="red">Quick Stock</font><br><font color="black">(16459)</font></td></tr><tr><td valign="top"><input name="day8[]" type="checkbox" value="144" disabled></td><td><font color="gray">USS Stock</font></td></tr></table></td></tr></table><p><hr noshade size="1"></p><table border="0" cellpadding="0" cellspacing="0" class="Verdana12px" width="100%"><tr><td align="center"><input style="WIDTH: 130px; height: 26px" type="button" value="Search" id="btnSearsh" onClick="startSearch('btnSearsh',searchform)" name="button"> 
+            <input style="WIDTH: 130px; height: 26px" type="reset" value="Clear form" name="reset"></td></tr></table><fieldset><legend align="right"><b style="font-size: 20px;"><a href="/manager/?p=project/getvipstatus">VIP</a></b></legend><table border="0" cellpadding="4" cellspacing="0" class="Verdana16px"><input type="hidden" name="manage_code" value="0"><tr><td colspan="2" class="Verdana12px"><b>Searches used:</b> 0 of
+                
+                        5
+                    </td></tr><tr><td colspan="2" class="Verdana12px">You can fill in the search form and save current search parameters:</td></tr><tr><td colspan="2" class="Verdana12px" nowrap><b>Save search parameters:</b></td></tr><tr><td width="90" class="Verdana12px" nowrap>Search name:</td><td><input maxlength="40" name="search_title" style="WIDTH: 190px;" value="" disabled></td></tr><tr><td class="Verdana12px" nowrap>Receive email notification<br> of suitable cars twice a day</td><td><input type="checkbox" disabled></td></tr><tr><td colspan="2"><input style="WIDTH: 100px;" type="button" value="Save" onclick="save_search(this.form)" name="button2" disabled></td></tr></table></fieldset>
+                </td>
+                <td background="/static/img/lsf_right_border.gif"></td>
+            </tr>
+            <tr>
+                <td background="/static/img/lsf_bottom_border.gif"></td>
+                <td height="25"><img src="/static/img/lsf_bottom_right_corner.gif"/></td>
+            </tr>
+            </table>
+        <script language="Javascript" type="text/javascript">
+                $('#search_id').change(function () {
+                    var isDisplayDeleteButton = (this.value > 0) ? '' : 'none';
+                    document.getElementById('delete_button').style.display = isDisplayDeleteButton;
+                });
+            
+        function delete_search(form) {
+            if (form.search_id.value=='0') {
+                alert('__choose_search__!');
+                return;
+            }
+            form.manage_code.value='2';
+            form.action='/auctions/proc.phtml?p=project/searchmanage';
+            form.method = "post";
+            $("#listActionPage").remove();
+            form.submit();
+        }
+    </script></td></tr></table></form>
+        </td>
+    </tr>
+    </table>
+
+
+            <table width="100%" border="0" cellspacing="0" cellpadding="0">
+            <!--Bottom menu-->
+            <tr>
+                <td>
+                    <div class="footer">
+                        <div class="foot1">
+                            <table border="0" cellpadding="1" cellspacing="1" class="Verdana12px"><tr>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/auctions/?p=project/searchform&amp;searchtype=max&amp;s&amp;ld" class="anchorclass" rel="subauto">Cars</a></td>
+<div id="subauto" class="anylinkcss"><ul>
+<li><b>Japan Auctions</b></li>
+<li><a href="/auctions?p=project/productiondate">Date of production</a></li>
+<li><a href="/stats/?p=project/fastform">Auto statistics</a></li>
+<li><a href="/autocatalog/?p=project/companies">Auto catalog</a></li>
+<li><a href="/translations/?p=project/listtranslations">Auction list translations</a></li>
+</ul></div>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/stats/?p=project/fastform">Auto Auctions<br/>Statistics</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/moto/?p=project/searchform&amp;searchtype=max&amp;s&amp;ld" class="anchorclass" rel="submoto">Motorcycles</a></td>
+<div id="submoto" class="anylinkcss"><ul>
+<li><a href="/moto/?p=project/searchform&amp;searchtype=max&amp;s&amp;ld">Japan Auctions</a></li>
+<li><a href="/motostats/?p=project/searchform&amp;searchtype=max&amp;s&amp;ld">Moto statistics</a></li>
+</ul></div>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/managerates/?p=project/foundrates">Vehicles<br/>Bids</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/bidseng/newOnlineOrder">Order from<br/>japanese shops</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/bidseng/parts/search">Order new<br>spare parts</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/yahoo/">Yahoo<br/>Auctions</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/bidseng">Yahoo<br/>Bids</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/billingeng">Account<br/>management</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/chat/?p=project/foundtopics">Question<br/>Answer</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="/manager/?p=project/updateselfinfo">Personal<br/>Information</a></td>
+<td><img src="/static/img/main_menu_separator.gif" alt=""></td>
+<td valign="middle" nowrap align="center"><a href="https://aleado.com/contacts.html">Contacts</a></td>
+</tr></table>
+                        </div>
+                    </div>
+                </td>
+             </tr>
+            <!--Copyright-->
+            <tr>
+                <td class="Verdana9px" height="22" valign="middle" align="center"><font color="#666666">
+     © 2008-2026</font>
+                </td>
+            </tr>
+            </table>
+
+        </td>
+    </tr>
+    </table>
+
+</body>
+</html>
